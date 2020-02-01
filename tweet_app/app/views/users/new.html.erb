@@ -1,0 +1,18 @@
+<h2> Lets create your account !! </h2>
+
+<%= form_tag("/users/create") do %>
+<% @user.errors.full_messages.each do |message| %>
+    <p>
+    <%= message %>
+    </p>
+<% end %>
+user_name
+<input name="name" value = "<%= @user.name %>">
+email
+<input name="email" value = "<%= @user.email %>">
+password
+<input name="password" value = "<%= @user.password %>" type = "password">
+
+<input type = "submit" value ="signup">
+
+<% end %>

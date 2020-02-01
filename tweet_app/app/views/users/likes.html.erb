@@ -1,0 +1,9 @@
+<p>
+過去にイイネした投稿
+<% @likes.each do |like| %>
+    <% post = Post.find_by(post_id: like.post_id) %>
+    <p>
+    <%=link_to(post.content, "/posts/#{post.id}") %>
+    </p>
+<% end %>
+</p>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>TweetApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  
+  <body>
+  <header>
+    <div class = "header-logo">
+    <%= link_to("TweetApp", "/") %>
+    </div> 
+    
+    
+    <% if @current_user%>
+    <ul>
+    <li>
+    <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+    </li>
+
+    <li>
+    <%= link_to("ユーザー一覧", "/users/index") %>
+    </li>
+
+    <li>
+    <%= link_to("新規投稿", "/posts/new") %>
+    </li>
+
+    <li>
+    <%= link_to("ログアウト", "/logout", {method: "post"}) %>
+    </li>
+    </ul>
+    
+    <% else %>
+    <ul>
+    <li>
+    <%= link_to("TweetAppとは", "/top/about") %>
+    </li>
+
+    <li>
+    <%= link_to("ログイン", "/login", {method: "post"})  %>
+    </li>
+
+    <li>
+    <%= link_to("新規登録", "/signup") %>
+    </li>
+
+    </ul>
+
+    <% end %>
+    
+
+    <% if flash[:noitce] %>
+      <%= flash[:notice] %>
+    <% end %>
+  </header>
+    <% if flash[:noitce] %>
+      <%= flash[:notice] %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

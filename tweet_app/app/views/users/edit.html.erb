@@ -1,0 +1,24 @@
+<h2> Edit Profile </h2>
+
+<% @user.errors.full_messages.each do |message| %>
+    <p>
+    <%= message %>
+    </p>
+<% end %>
+
+<%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
+    <p>
+    user_name
+    <input name="name" value = "<%= @user.name %>"></textarea>
+    </p>
+    <p>
+    email
+    <input name="email" value = "<%= @user.email %>"></textarea>
+    </p>
+    <p>
+    icon
+    <input name = "image" type = "file">
+    </p>
+<input type = "submit" value ="更新">
+
+<% end %>

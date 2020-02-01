@@ -1,0 +1,11 @@
+<h2> Lets tweet !! </h2>
+
+<%= form_tag("/posts/create") do %>
+<% @post.errors.full_messages.each do |message| %>
+    <%= message %>
+<% end %>
+<textarea name="content"><%= @post.content %></textarea>
+
+<input type = "submit" value ="投稿">
+
+<% end %>

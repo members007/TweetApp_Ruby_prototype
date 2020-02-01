@@ -1,0 +1,29 @@
+<img src="<%= "/#{@user.image_name}"%>">
+<%= link_to(@user.name,"/users/#{@user.id}/show") %>
+
+<%= @post.content %>
+<%= @post.created_at %>
+
+<p>
+イイネの数
+<%= @like_numbers %>
+</p>
+
+
+<p>
+<% if @favor %>
+    <%= link_to("/likes/#{@post.id}/unlike", {method: "post"}) do %>
+        <span class ="fa fa-heart like-btn-unlike"></span>
+    <% end %>
+<% else %>
+    <%= link_to("/likes/#{@post.id}/like", {method: "post"}) do %>
+        <span class ="fa fa-heart like-btn"></span>
+    <% end %>
+<% end %>
+</p>
+
+
+<% if @current_user[:id] == @post.user_id %>
+<%= link_to("編集","/posts/#{@post.id}/edit") %>
+<%= link_to("削除","/posts/#{@post.id}/destroy", {method: "post"}) %>
+<% end %>

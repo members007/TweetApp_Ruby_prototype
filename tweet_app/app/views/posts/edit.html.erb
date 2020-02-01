@@ -1,0 +1,13 @@
+<h2> Lets upadte !! </h2>
+
+<% @post.errors.full_messages.each do |message| %>
+    <%= message %>
+<% end %>
+
+<%= form_tag("/posts/#{@post.id}/update") do %>
+
+    <textarea name = "content"> <%= @post.content %></textarea>
+
+<input type = "submit" value ="投稿">
+
+<% end %>
