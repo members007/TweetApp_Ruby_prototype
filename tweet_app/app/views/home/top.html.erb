@@ -1,4 +1,30 @@
+<!--
 <div class = "top-main">
 <h1>つぶやきで世界はつながる</h1>
 <p>今の気持ちをつぶやいてみよう！！</p>
+</div>
+-->
+<div class="box">
+    <h1 class="logo">世界はつながる</h1>
+
+    <div class="form">
+        <div>
+            <h2 class="title">すでにアカウントをお持ちの方</h2>
+            <div class="menu_icon">
+                <%= link_to("/login", {method: "post"}) do %>
+                    <span class="fa fa-sign-in fa-3x"></span>
+                    <% end %>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <div>
+            <h2 class="title">始めて<span>TweetApp</span>をご利用の方</h2>
+            <div class="menu_icon">
+                <%= link_to("/signup") do %>
+                    <span class="fa fa-user-plus fa-3x"></span>
+                    <% end %>
+            </div>
+        </div>
+    </div>
 </div>

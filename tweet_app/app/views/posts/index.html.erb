@@ -1,9 +1,18 @@
+<div class="index_box">
 <% @posts.each do |post| %>
-    <p>
-    <img src='<%= "/#{post.user.image_name}" %>'>
-    <%=link_to(post.user.name, "/users/#{post.user.id}/show") %>
-    <%=link_to(post.content, "/posts/#{post.id}") %>
-    </p>
-    
-<% end %>
+    <p class="index_post">
+        <div class="user-image index_image">
+            <img src='<%= "/#{post.user.image_name}" %>'>
+        </div>
+        <div class="index_name">
+            <%=link_to(post.user.name, "/users/#{post.user.id}/show") %>
+        </div>
+        <div class="index_content">
+            <%=link_to(post.content, "/posts/#{post.id}") %>
+        </div>
 
+    </p>
+
+    <% end %>
+
+</div>

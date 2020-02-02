@@ -14,17 +14,48 @@
  *= require_self
  */
 
-li {
+header {
     float: left;
+}
+
+li {
     list-style: none;
     padding: 10px;
     margin: auto;
 }
 
 .header_logo {
-    color: red;
+    font-size: 40px;
+    font-family: "Arial Black";
+    color: skyblue;
+    padding: 20px 30px;
 }
 
-.top-main {
-    background-image: url("/apple-touch-icon.png");
+.header_list {
+    font-size: 20px;
+    color: skyblue;
+    padding: 10px 15px;
+}
+
+.main {
+    padding: 40px;
+    margin: 0 50px;
+}
+
+.user_image_for_bar img {
+    padding-left: 60px;
+    height: 50px;
+    width: 50px;
+}
+
+.about {
+    font-size: 24px;
+}
+
+.menu_icon {
+    margin: 0 auto;
+}
+
+span {
+    font-family: "Arial Black";
 }

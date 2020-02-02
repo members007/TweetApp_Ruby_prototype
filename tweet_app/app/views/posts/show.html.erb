@@ -1,29 +1,46 @@
-<img src="<%= "/#{@user.image_name}"%>">
+<div class= "box parent">
+<div class= "user_image child_1">
+<img src="<%= " /#{@user.image_name} "%>">
+</div>
+<div class="post_user_name child_2">
 <%= link_to(@user.name,"/users/#{@user.id}/show") %>
+</div>
+<div class="post_content child_3">
+    <%= @post.content %>
+    </div>
+    <div class= "post_created_at child_4">
+        <%= @post.created_at %>
+</div>
+            <p class="child_5">
+                イイネの数
+                <%= @like_numbers %>
+            </p>
 
-<%= @post.content %>
-<%= @post.created_at %>
-
-<p>
-イイネの数
-<%= @like_numbers %>
-</p>
-
-
-<p>
-<% if @favor %>
-    <%= link_to("/likes/#{@post.id}/unlike", {method: "post"}) do %>
-        <span class ="fa fa-heart like-btn-unlike"></span>
-    <% end %>
-<% else %>
-    <%= link_to("/likes/#{@post.id}/like", {method: "post"}) do %>
-        <span class ="fa fa-heart like-btn"></span>
-    <% end %>
-<% end %>
-</p>
-
-
-<% if @current_user[:id] == @post.user_id %>
-<%= link_to("編集","/posts/#{@post.id}/edit") %>
-<%= link_to("削除","/posts/#{@post.id}/destroy", {method: "post"}) %>
-<% end %>
+            <div class="child_6">
+            <p>
+                <% if @favor %>
+                    <%= link_to("/likes/#{@post.id}/unlike", {method: "post"}) do %>
+                        <span class="fa fa-heart like-btn-unlike"></span>
+                        <% end %>
+                            <% else %>
+                                <%= link_to("/likes/#{@post.id}/like", {method: "post"}) do %>
+                                    <span class="fa fa-heart like-btn"></span>
+                                    <% end %>
+                                        <% end %>
+            </p>
+            </div>
+            <div class="child_7">
+            <% if @current_user[:id] == @post.user_id %>
+            <div class="edit">
+            <%= link_to("/posts/#{@post.id}/edit") do %>
+                        <span class="fa fa-pencil-square-o fa-2x"></span>
+                        <% end %>
+                        </div>
+                        <div class="destroy">
+                        <%= link_to("/posts/#{@post.id}/destroy", {method: "post"}) do %>
+                        <span class="fa fa-trash fa-2x"></span>
+                        <% end %>
+                        </div>
+                        <% end %>
+                        </div>
+                        </div>

@@ -1,6 +1,12 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.box {
+    width: 400px;
+    margin: 80px auto;
+    padding: 0 200px;
+}
+
 .like-btn {
     color: red;
 }
@@ -8,3 +14,141 @@
 .like-btn-unlike {
     color: skyblue;
 }
+
+.new-logo {
+    font-size: 30px;
+    color: orange;
+    padding: 60px 60px;
+}
+
+.user-image img {
+    height: 50px;
+    width: 50px;
+}
+
+.user-name {
+    font-size: 20px;
+}
+
+.index-content {
+    font-size: 25px;
+}
+
+.index-post {
+    padding: 15px 20px;
+}
+
+.post_user_name {
+    font-size: 40px;
+}
+
+.post_content {
+    font-size: 30px;
+}
+
+.post_created_at {
+    font-size: 15px;
+    color: gray;
+}
+
+.child_1 img {
+    //img
+    position: absolute;
+    top: 10;
+    left: 10;
+}
+
+.child_2 {
+    //name
+    position: absolute;
+    top: 125px;
+    left: 510px;
+}
+
+.child_3 {
+    //content
+    position: absolute;
+    top: 180px;
+    left: 440px;
+}
+
+.child_4 {
+    //create
+    position: absolute;
+    top: 290px;
+    left: 440px;
+}
+
+.child_5 {
+    //good
+    position: absolute;
+    top: 300px;
+    left: 440px;
+}
+
+.child_6 {
+    //btn
+    position: absolute;
+    top: 302px;
+    left: 550px;
+}
+
+.edit {
+    padding: 0 440px;
+    position: absolute;
+    top: 350px;
+    left: 520px;
+}
+
+.destroy {
+    float: right;
+    padding: 0 520px;
+    position: absolute;
+    top: 350px;
+    left: 550px;
+}
+
+.new_box {
+    width: 300px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.new_user_name {
+    width: 300px;
+    margin: 90px auto;
+}
+
+.new_user_image img {
+    padding: 90px 140px;
+}
+
+input {
+    height: 30px;
+    width: 51px;
+}
+
+textarea {
+    width: 300px;
+    height: 10em;
+    float: left;
+}
+
+.index_box {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.index_post {
+    margin: 50px 10px;
+}
+
+.index_image {
+    float: left;
+}
+
+.index_name {
+    margin: 0 50px;
+}
+
+.index_content {}

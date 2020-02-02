@@ -1,6 +1,43 @@
+<!--
 <% @users.each do |user| %>
+    <ul>
+    <li>
+    <div class="user_image profile">
     <img src='<%= "/#{user.image_name}" %>'>
-    <p>
+    </div>
+    </li>
+    <li>
+    <div class="profile">
     <%= link_to(user.name,"/users/#{user.id}/show") %>
-    </p>
+    </div>
+    </li>
+    </ul>    
 <% end %>
+-->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <header>
+    </header>
+    <div class="index_box">
+        <ul>
+            <% @users.each do |user| %>
+                <p class="user_profile">
+                    <div class="user_image">
+                        <img src='<%= "/#{user.image_name}" %>'>
+                    </div>
+                    <div class="user_name">
+                        <%= link_to(user.name,"/users/#{user.id}/show") %>
+                    </div>
+                </p>
+                <% end %>
+        </ul>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

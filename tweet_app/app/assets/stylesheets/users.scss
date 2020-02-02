@@ -1,3 +1,52 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.user_image img {
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+
+.user_name {
+    font-size: 20px;
+    padding: 5px 5px;
+}
+
+.user_email {
+    font-size: 20px;
+    padding: 5px 5px;
+}
+
+.index_box span {
+    font-size: 30px;
+    color: red;
+}
+
+.user_profile {
+    // space between users
+    padding: 27px 20px;
+}
+
+.archive {
+    font-size: 20px;
+}
+
+.post {
+    padding: 15px 15px;
+}
+
+.index_box {
+    width: 390px;
+    margin: 0 auto;
+}
+
+.user_image_each img {
+    height: 30px;
+    width: 30px;
+    float: left;
+}
+
+.show_content {
+    font-size: 20px;
+    padding: 0 60px;
+}

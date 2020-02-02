@@ -1,6 +1,24 @@
-<div class = "about-main">
-<h2>TweetApp の特徴</h2>
-<p>自由な投稿が可能</p>
-<p>140字以内で簡潔な投稿</p>
-<p>イイネ！機能で繋がろう</p>
+<div class="box">
+    <h1 class="logo"><span>TweetApp</span>とは</h1>
+    自由な投稿とイイネ機能で繋がってみませんか
+    <div class="form">
+        <div>
+            <h2 class="title">すでにアカウントをお持ちの方</h2>
+            <div class="menu_icon">
+                <%= link_to("/login", {method: "post"}) do %>
+                    <span class="fa fa-sign-in fa-3x"></span>
+                    <% end %>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <div>
+            <h2 class="title">始めて<span>TweetApp</span>をご利用の方</h2>
+            <div class="menu_icon">
+                <%= link_to("/signup") do %>
+                    <span class="fa fa-user-plus fa-3x"></span>
+                    <% end %>
+            </div>
+        </div>
+    </div>
 </div>

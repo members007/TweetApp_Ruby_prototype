@@ -1,11 +1,19 @@
-<h2> Lets tweet !! </h2>
+<div class= "user_image child_1 new_user_image">
+<img src="<%= " /#{@current_user.image_name} "%>">
+</div>
+<div class="post_user_name new_user_name">
+<%= link_to(@current_user.name,"/users/#{@current_user.id}/show") %>
+</div>
 
+
+<div class="new_box">
 <%= form_tag("/posts/create") do %>
-<% @post.errors.full_messages.each do |message| %>
-    <%= message %>
-<% end %>
-<textarea name="content"><%= @post.content %></textarea>
+    <% @post.errors.full_messages.each do |message| %>
+        <%= message %>
+            <% end %>
+                <textarea name="content" class="new-form"><%= @post.content %></textarea>
 
-<input type = "submit" value ="投稿">
-
-<% end %>
+                <input type="submit" value="投稿" class="new-btn">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <% end %>
+</div>
